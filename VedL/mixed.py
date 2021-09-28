@@ -1,3 +1,5 @@
+from calendar import calendar
+
 import math
 import random
 import re
@@ -56,4 +58,42 @@ while i <= n - 1:
 for j in range(n):
     print(j * j)
 
-print(*[num**2 for num in range(n)], sep='\n')
+print(*[num ** 2 for num in range(n)], sep='\n')
+
+
+def is_leap(year):
+    leap = False
+
+    # Write your logic here
+    if year % 4 == 0:
+        if year % 400 == 0:
+            leap = True
+            return leap
+    else:
+        leap = False
+    return leap
+
+
+year = 1992
+print(is_leap(year))
+
+
+def is_leap(year1):
+    return year1 % 4 == 0 and (year % 400 == 0 or year % 100 != 0)
+
+
+year1 = 1989
+print(is_leap(year1))
+
+
+
+#def is_leap1(year2): pass
+#print(calendar.isleap1(int()))
+#exit()
+
+#year2 = 1992
+#print(is_leap1(year2))
+n=5
+for i in range(n):
+    j=i+1
+    print(j, end="")
